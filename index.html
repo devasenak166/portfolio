@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background-color: rgb(27, 27, 27);
+       
+        opacity: 1;
+      }
+      .box {
+        font-family: Arial, sans-serif;
+        background: url(https://media.istockphoto.com/id/1401307605/photo/rear-of-female-web-expert-typing-on-computer-looking-at-monitors-while-sitting-indoors.jpg?b=1&s=170667a&w=0&k=20&c=ZH6pHvoSzdP0PvCr2PVfJY9YdhGIWFP8zLEweAG53tY=)
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+      }
+
+      .jumbotron {
+        background: linear-gradient(
+          to right,
+          rgba(222, 107, 211, 1) 0%,
+          rgba(197, 50, 226, 1) 45%,
+          rgba(55, 200, 235, 1) 100%
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
+      .btn {
+        background: rgb(222, 107, 211);
+        background: linear-gradient(
+          90deg,
+          rgba(222, 107, 211, 1) 0%,
+          rgba(197, 50, 226, 1) 45%,
+          rgba(55, 200, 235, 1) 100%
+        );
+        color: white;
+        border-radius: 50px;
+        border: 1px solid white;
+      }
+
+      .b-example-divider {
+        height: 0.1rem;
+        background-color: rgb(228, 103, 165);
+        border: 1px solid rgb(206, 131, 250);
+      }
+
+      /* .colorr {
+        background: linear-gradient(
+          0deg,
+          rgba(46, 77, 167, 1) 16%,
+          rgba(238, 145, 141, 1) 74%
+        );
+      } */
+      .marketing .col-lg-4 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        margin-top: 2.5rem;
+      }
+      /* rtl:begin:ignore */
+      .marketing .col-lg-4 p {
+        margin-right: 0.75rem;
+        margin-left: 0.75rem;
+      }
+      .parallax-container {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /*  this is where the magic happens:  */
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+      }
+
+      .parallax-container2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 6rem 0;
+        background-image: url(https://c4.wallpaperflare.com/wallpaper/195/687/738/autohotkey-programmers-code-programming-wallpaper-preview.jpg);
+ 
+        gap: 1.6em;
+      }
+      #parallax {
+        max-width: 52ch;
+        padding: 1em;
+        line-height: 1.5;
+        font-weight: 700;
+      }
+
+      h3 {
+        margin-top: 1em;
+        font-size: 1.6rem;
+        font-weight: 900;
+      }
+
+      .card {
+        display: flex;
+        max-width: 320px;
+        flex-direction: column;
+        align-items: center;
+
+        padding-bottom: 1rem;
+        border-radius: 0.9em;
+        background-color: white;
+        box-shadow: 0 29px 38px -15px rgb(0 0 0 / 43%);
+      }
+      .feature {
+        background: url(https://e0.pxfuel.com/wallpapers/398/350/desktop-wallpaper-nillia-webdesign-web-development-management.jpg)
+          no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+      }
+      .b-divider {
+        width: 100%;
+        height: 0.2rem;
+        background-color: rgb(253, 253, 253);
+        border: solid rgb(102, 101, 102);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+          inset 0 0.125em 0.5em rgba(240, 116, 203, 0.15);
+      }
+      /*.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #8767ac;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+ 
+}
+.button:hover {
+  background: #b8b8b8e3;
+  color:black;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+} */
+
+      /* @media screen and (max-width: 576px){
+  .box{
+    background: url(https://media.istockphoto.com/id/1401307605/photo/rear-of-female-web-expert-typing-on-computer-looking-at-monitors-while-sitting-indoors.jpg?b=1&s=170667a&w=0&k=20&c=ZH6pHvoSzdP0PvCr2PVfJY9YdhGIWFP8zLEweAG53tY=) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  
+  }
+  .popup{
+    width: 70%;
+  }
+} */
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Welcome Dude!</h1> -->
+    <!-- <div class="box"> -->
+    <section>
+      <div class="box">
+        <div
+          class="d-grid gap-2 col-8 mx-auto position-absolute top-50 start-50 translate-middle"
+        >
+          <div class="container my-5">
+            <div class="p-5 text-center rounded-3">
+              <h1 class="jumbotron fw-bold">Devasena!..</h1>
+              <p class="lead m-5 text-white fw-bold">
+                Welcome to my portfolio website! I'm Devasena, an aspiring IT professional with a passion for web development and a thirst for knowledge. Explore my portfolio to see how my skills and experiences can contribute to your projects.
+              </p>
+              <button class="btn px-5 mb-5 fw-bold" type="button">
+               Know more..
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+        <!--
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, laudantium.</h1>
+        <button class="btn" type="button"><a class="button" href="#popup1">Know more</a></button>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- <div class="b-example-divider w-75 ms-auto me-auto rounded"></div> -->
+    <div class="p-3 rounded-3">
+      <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold jumbotron mb-5">ABOUT</h1>
+        <p class="fs-6 ms-5 me-5 fw-normal text-white">
+          A recent graduate with a Bachelor's degree in Information Technology . With a solid academic record, including an impressive 8.3 GPA, I am driven to excel in the IT industry. I have a strong foundation in web development, with expertise in HTML, CSS, JavaScript, jQuery, Firebase, and React. Additionally, I have knowledge of Python and Java basics, allowing me to adapt to diverse project requirements.
+        </p>
+        <button class="btn mt-4 fw-bold" type="button">Explore</button>
+      </div>
+    </div>
+    <div class="b-example-divider w-25 ms-auto me-auto rounded"></div>
+    <section>
+      <div class="container-fluid marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX6HER_DjunBxrl74ttoDwT5SawpYOqlzbjA&usqp=CAU"
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              alt=""
+            />
+
+            <h2 class="fw-bold jumbotron">B.Tech</h2>
+            <p class="fw-normal text-white">
+             Karpagam Institute Of Technology,Coimbatore.
+             Graduated with 8.4 percent.
+            </p>
+            <!-- <button class="btn" type="button">Example button</button> -->
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYp0GebWVv6gnNxyhmbvlZ1rMHhyVBGDVRWQ&usqp=CAU"
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              alt=""
+            />
+            <h2 class="fw-bold jumbotron">HSC</h2>
+            <p class="fw-normal text-white">
+             TNK.Matric.Hr.Sec.School, Kavindapadi-Erode.
+             Completed with 90 percent.
+            </p>
+            <!-- <button class="btn" type="button">Example button</button> -->
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYp0GebWVv6gnNxyhmbvlZ1rMHhyVBGDVRWQ&usqp=CAU"
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              alt=""
+            />
+            <h2 class="fw-bold jumbotron">SSLC</h2>
+            <p class="fw-normal text-white">
+              TNK.Matric.Hr.Sec.School, Kavindapadi-Erode.
+              Completed with 90 percent.
+                          </p>
+            <!-- <button class="btn" type="button">Example button</button> -->
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+      </div>
+    </section>
+    <div class="b-example-divider"></div>
+    <!-- about -->
+    <section>
+      <div class="container-fluid px-4 py-5 feature" id="featured-3">
+        <h1 class="pb-2 py-5 text-center fw-bold text-white">PROJECTS</h1>
+        <div class="b-example-divider w-25 ms-auto me-auto rounded mb-3"></div>
+        <div class="row">
+          <div class="feature col">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+            ></div>
+            <div class="position-sticky" style="top: 2rem">
+              <div class="p-4 mb-3 border border-5 rounded text-white">
+                <h4 class="fst-italic fw-bold jumbotron">Fashionista</h4>
+                <p class="mb-0">
+                  Developed a web application for a fashionable dress using HTML, CSS, and JavaScript to showcase fashion trends and styles.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature col">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+            ></div>
+            <div class="position-sticky" style="top: 2rem">
+              <div class="p-4 mb-3 border border-5 rounded text-white">
+                <h4 class="fst-italic fw-bold jumbotron">Author</h4>
+                <p class="mb-0">
+                  Created a responsive website for an author, incorporating features such as blog posts, book previews, and an interactive contact form.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature col">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+            ></div>
+            <div class="position-sticky" style="top: 2rem">
+              <div class="p-4 mb-3 border border-5 rounded text-white">
+                <h4 class="fst-italic fw-bold jumbotron">Trello Landing page.</h4>
+                <p class="mb-0">
+                  I developed a Trello-inspired webpage that demonstrates my proficiency in web development ,that offers a simplified task management system, allowing users to create boards, lists, and cards etc
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="feature col">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+            ></div>
+            <div class="position-sticky" style="top: 2rem">
+              <div class="p-4 mb-3 border border-5 rounded text-white">
+                <h4 class="fst-italic fw-bold jumbotron">MSD Internship Project</h4>
+                <p class="mb-0">
+                  Collaborated on a project using Angular, Node.js, and MongoDB to create a web application for managing student data.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature col">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+            ></div>
+            <div class="position-sticky" style="top: 2rem">
+              <div class="p-4 mb-3 border border-5 rounded text-white">
+                <h4 class="fst-italic fw-bold jumbotron">Firebase Auth Databse</h4>
+                <p class="mb-0">
+                  Firebase Auth and Realtime DB project  includes features such as user registration, secure authentication, profile management, real-time data storage.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature col">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+            ></div>
+            <div class="position-sticky" style="top: 2rem">
+              <div class="p-4 mb-3 border border-5 rounded text-white">
+                <h4 class="fst-italic fw-bold jumbotron">What'sApp Landing-page</h4>
+                <p class="mb-0">
+                   With an eye-catching design and intuitive user interface, the WhatApp landing page effectively communicates the app's features and benefits to potential users. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="b-example-divider"></div>
+    <!-- features -->
+    <section>
+      <div class="container px-4 py-5">
+        <h2 class="pb-2 text-center text-white fw-bold">Skills</h2>
+        <div
+          class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5"
+        >
+          <div class="col d-flex flex-column align-items-start gap-2">
+            <h3 class="text-white fw-bold jumbotron">
+              Unique Skill Set for an Elite Professional
+            </h3>
+            <p class="text-white fw-normal">
+              Junior Developer Intern at Cogniti Digital solutions , Chennai, where I gained practical experience in web development and contributed to real-world projects. Attended workshops on IOT and ML to stay up-to-date with the latest technologies and industry trends.
+            </p>
+            <!-- <a href="#" class="btn">Primary button</a> -->
+          </div>
+
+          <div class="col">
+            <div class="row row-cols-1 row-cols-sm-2 g-4">
+              <div class="col d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                ></div>
+                <h4 class="fw-semibold mb-0 jumbotron">Problem-Solving</h4>
+                <p class="text-white fw-normal">
+                  FreeCodeCamp and HackerRank 
+                </p>
+              </div>
+
+              <div class="col d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                ></div>
+                <h4 class="fw-semibold mb-0 jumbotron">Web Development</h4>
+                <p class="text-white fw-normal">
+                  HTML, CSS, JavaScript, jQuery, Firebase,React,Angular(basic)
+                </p>
+              </div>
+
+              <div class="col d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                ></div>
+                <h4 class="fw-semibold mb-0 jumbotron">Backend-knoweldge</h4>
+                <p class="text-white fw-normal">
+                  Nodejs, MongoDB  
+                </p>
+              </div>
+
+              <div class="col d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                ></div>
+                <h4 class="fw-semibold mb-0 text-white jumbotron">
+                  Programming Languages
+                </h4>
+                <p class="text-white fw-normal">
+                  Basics of Python, Java , C.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="b-example-divider w-75 ms-auto me-auto rounded"></div>
+    <!-- responsive design resume -->
+    <section>
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-white lh-1 mb-3 jumbotron">
+            Resume
+          </h1>
+          <p class="lead text-white fs-6 fw-normal">
+          
+Here is my resume. <br>
+Please feel free to review and provide feedback!...
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn fw-bold px-4 me-md-2">
+              View
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary fw-bold px-4"
+            >
+              Download
+            </button>
+          </div>
+        </div>
+       
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img
+              src="https://www.jobillico.com/blog/wp-content/uploads/2020/11/How-To-Format-Your-Resume-in-2020.jpg"
+              class="d-block mx-lg-auto img-fluid rounded"
+              alt="Bootstrap Themes"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- parallax-container -->
+    <section class="parallax-container parallax-container2">
+      <div class="card">
+        <h3 class="jumbotron">Demo Site</h3>
+        <a href=" https://sparkling-stroopwafel-13f0a2.netlify.app/"><p id="parallax">
+          https://sparkling-stroopwafel-13f0a2.netlify.app/
+        </p></a>
+      </div>
+      <div class="card">
+        <h3 class="jumbotron">Demo site</h3>
+        <a href="  https://warm-wisp-1ce091.netlify.app/"> <p id="parallax">
+          https://warm-wisp-1ce091.netlify.app/
+        </p></a>
+      </div>
+      <div class="card">
+        <h3 class="jumbotron">LogIn demo</h3>
+        <a href="https://neon-kitten-3c274b.netlify.app/"> <p id="parallax">
+          https://neon-kitten-3c274b.netlify.app/
+        </p></a>
+      </div>
+
+      <div class="card">
+        <h3 class="jumbotron">Form react</h3>
+        <a href="https://jocular-buttercream-0bd12f.netlify.app/"> <p id="parallax">
+          https://jocular-buttercream-0bd12f.netlify.app/
+        </p></a>
+      </div>
+      <div class="card">
+        <h3 class="jumbotron">Accordion</h3>
+        <a href="https://lovely-platypus-d68b63.netlify.app/"> <p id="parallax">
+          https://lovely-platypus-d68b63.netlify.app/
+        </p></a>
+      </div>
+      <div class="card">
+        <h3 class="jumbotron">Review demo</h3>
+        <a href=" https://64a42b30358375161c3ed58c--chic-yeot-f1870d.netlify.app/"> <p id="parallax">
+          https://64a42b30358375161c3ed58c--chic-yeot-f1870d.netlify.app/
+        </p></a>
+      </div>
+    </section>
+    <!-- footer -->
+    <section>
+      <div class="container-fluid">
+        <footer
+          class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+        >
+          <p class="col-md-4 mb-0 fw-bold text-white">
+            &copy; 2023 Company, Inc
+          </p>
+
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-white fw-bold">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-white fw-bold">Features</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-white fw-bold">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-white fw-bold">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-white fw-bold">About</a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
